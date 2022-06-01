@@ -1,0 +1,26 @@
+{
+    "id": "1F1CD590",
+    "path": "~/Work/cheat_sheet/scriptResume/R/get_names.R",
+    "project_path": "R/get_names.R",
+    "type": "r_source",
+    "hash": "571307186",
+    "contents": "",
+    "dirty": false,
+    "created": 1636566153189.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "0,11",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1636565846,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1636565846,
+    "read_only": false,
+    "read_only_alternatives": []
+}

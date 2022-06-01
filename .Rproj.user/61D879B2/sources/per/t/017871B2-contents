@@ -1,0 +1,47 @@
+# this is a testing sample
+library(rstudioapi)
+library(scriptResume)
+library("apple")
+library(pear)
+library("pear")
+library(peach)
+require(something)
+library(stringr)
+library("pear")
+
+
+ADSL= "adsl/"
+source("src/utils/utils.R")
+source("something.R")
+
+file.path(ADSL, 'dra.rds')
+load("some/path/dome.Rda")
+data.1 <- read.csv("somedata.csv", header = T)
+some <- read.csv("something.csv")
+something <- readRDS("something.Rds")
+c("a", "b", "c")
+pos <- Map(c, 1:5, 1)
+rstudioapi::insertText(pos, "# ")
+rng <- Map(c, Map(c, 1:5, 1), Map(c, 1:5, 3))
+rstudioapi::modifyRange(rng, "" )
+
+get_mean <- function(data){
+  return(apply(data, 1, mean))
+}
+
+ggplot2::ggplot(data, aes(x, y))
+saveRDS(data.1, data.2,"data.Rda")
+write.csv(data,"data.csv")
+
+sth <- some %>% subset()
+sth2 <- something[which(something$this==0),]
+
+
+write.csv(sth,file.path(ADSK,"soemthing.csv"))
+writeChar(sl, "con")
+writeLines(something, "con")
+write(x, "file")
+saveRDS(file ,file.path(ADSL, 'dra.rds'))
+save.image(file,"something.png")
+save(som, list)
+

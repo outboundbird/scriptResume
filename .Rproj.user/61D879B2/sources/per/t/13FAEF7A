@@ -1,0 +1,26 @@
+{
+    "id": "13FAEF7A",
+    "path": "~/Work/cheat_sheet/scriptResume/R/extract_output.R",
+    "project_path": "R/extract_output.R",
+    "type": "r_source",
+    "hash": "2790295056",
+    "contents": "",
+    "dirty": false,
+    "created": 1636566147876.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "14,5",
+        "scrollLine": "12"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1634845478,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1634845478,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,7 @@
+{
+    "installOptions": {
+        "installFromRepository": false,
+        "libraryPath": "/Users/outboundbird/Work/cheat_sheet/scriptResume/renv/library/R-4.0/x86_64-apple-darwin17.0",
+        "installDependencies": true
+    }
+}

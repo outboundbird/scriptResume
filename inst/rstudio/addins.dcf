@@ -1,0 +1,15 @@
+Name: Insert header
+Description: Inserts header at the top position of r cript.
+Binding: insert_header
+Interactive: false
+
+
+Name: Insert unique libraries
+Description: Remove duplicated libraries and insert cleaned up libraries.
+Binding: remove_dup_libs
+Interactive: false
+
+Name: Objects to quoted text
+Description: Turns selected text into quoted text
+Binding: selection2str
+Interactive: false
