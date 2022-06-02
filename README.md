@@ -13,3 +13,13 @@ install.packages(
     repos = NULL, type = .Platform$pkgType
 )
 ```
+
+# Features
+## Addin features
+- insert header
+- insert unique libraries
+- object to quoted text
+- transform multiple text selection into Roxygen comments
+- transform selected text to upper or lower cases
+
+## Package features
