@@ -13,10 +13,10 @@ install.packages(
     repos = NULL, type = .Platform$pkgType
 )
 ```
-or 
+or
 
 ```
-devtools::install_github("outboundbird/midasHLA")
+devtools::install_github("outboundbird/scriptResume")
 ```
 
 # Features
