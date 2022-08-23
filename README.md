@@ -13,6 +13,11 @@ install.packages(
     repos = NULL, type = .Platform$pkgType
 )
 ```
+or
+
+```
+devtools::install_github("outboundbird/scriptResume")
+```
 
 # Features
 ## Addin features
