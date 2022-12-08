@@ -15,7 +15,7 @@ insert_header <- function() {
   nextline <- paste0(",\n#", paste0(rep(" ", 20), collapse = "") )
 
   header <- sprintf(
-    "# %s\n# Property of SANOFI\n# Program name     : %s\n# Description      : \n# Author           : Siying Huang (E0482362)\n# Compound number  : SAR%s\n# Study code       : %s\n# Analysis code    : BMK%s\n# Date created     : %s \n# Input files      : %s \n# Input programs   : %s \n# Packages needed  : %s \n# Outputs created  : %s  \n# R version        : %s\n# Platform         : %s\n# %s\n# Modification status :\n# %s \n# Description: \n# %s\n",
+    "# %s\n# Property of SANOFI\n# Program name     : %s\n# Description      : \n# Author           : Siying Huang (E0482362)\n# Compound number  : SAR%s\n# Study code       : %s\n# Analysis code    : BMK-%s\n# Date created     : %s \n# Input files      : %s \n# Input programs   : %s \n# Packages needed  : %s \n# Outputs created  : %s  \n# R version        : %s\n# Platform         : %s\n# %s\n# Modification status :\n# %s \n# Description: \n# %s\n",
     sep_star,
     paste0(current_file),
     triplet_info[1],
