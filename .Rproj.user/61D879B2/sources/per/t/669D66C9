@@ -1,6 +1,6 @@
 {
     "id": "669D66C9",
-    "path": "~/Work/cheat_sheet/scriptResume/R/selection2str.R",
+    "path": "~/Work/scriptResume/R/selection2str.R",
     "project_path": "R/selection2str.R",
     "type": "r_source",
     "hash": "1158778508",
@@ -13,7 +13,7 @@
         "source_window_id": "",
         "Source": "Source",
         "cursorPosition": "11,16",
-        "scrollLine": "9"
+        "scrollLine": "0"
     },
     "folds": "",
     "lastKnownWriteTime": 1633535156,
