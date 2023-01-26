@@ -13,3 +13,18 @@ Name: Objects to quoted text
 Description: Turns selected text into quoted text
 Binding: selection2str
 Interactive: false
+
+Name: Roxygen comment
+Description: Transform selected text into roxygen commented text
+Binding: selection2roxygen
+Interactive: false
+
+Name: Upper case
+Description: Transform selected text into upper case text
+Binding: to_upper
+Interactive: false
+
+Name: Lower case
+Description: Transform selected text into upper case text
+Binding: to_lower
+Interactive: false

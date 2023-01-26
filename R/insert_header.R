@@ -10,17 +10,22 @@ insert_header <- function() {
   input_data <- extract_uniq_inputs(doc$contents)
   src_file <- extract_uniq_src(doc$contents)
   current_file <- current_fname(doc$path)
+  triplet_info <- get_triplet(doc$path)
   sep_star <- paste0(rep("*", 78), collapse = "")
+  nextline <- paste0(",\n#", paste0(rep(" ", 20), collapse = "") )
 
   header <- sprintf(
-    "#%s\n# Property of SANOFI\n# Program name     : %s\n# Description      : \n# Author           : Siying Huang (E0482362)\n# Compound number  : SAR\n# Study code       : SAR\n# Analysis code    : BMK\n# Date created     : %s \n# Input files      : %s \n# Input programs   : %s \n# Packages needed  : %s \n# Outputs created  : %s  \n# R version        : %s\n# Platform         : %s\n# %s\n# Modification status :\n# %s \n# Description: \n# %s",
+    "# %s\n# Property of SANOFI\n# Program name     : %s\n# Description      : \n# Author           : Siying Huang (E0482362)\n# Compound number  : SAR%s\n# Study code       : %s\n# Analysis code    : BMK-%s\n# Date created     : %s \n# Input files      : %s \n# Input programs   : %s \n# Packages needed  : %s \n# Outputs created  : %s  \n# R version        : %s\n# Platform         : %s\n# %s\n# Modification status :\n# %s \n# Description: \n# %s\n",
     sep_star,
     paste0(current_file),
+    triplet_info[1],
+    triplet_info[2],
+    triplet_info[3],
     Sys.Date(),
-    paste0(input_data, collapse = ", "),
-    paste0(src_file, collapse = ", "),
-    paste0(doc_libs, collapse = ", "),
-    paste0(output_files, collapse = ", "),
+    paste0(input_data, collapse = nextline),
+    paste0(src_file, collapse = nextline),
+    paste0(doc_libs, collapse = nextline),
+    paste0(output_files, collapse = nextline),
     version$version.string,
     paste(Sys.info()[1:2], collapse = "-"),
     sep_star,
