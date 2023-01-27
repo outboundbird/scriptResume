@@ -32,7 +32,9 @@ roxygen_quote <- function(txt) {
 
 
 #' Undo roxygen comment
-#'
+#' @importFrom magrittr  %>%
+#' @name  %>%
+#' @rdname pipe
 #' @param text a string vector with roxygen comment sign.
 #'
 #' @return a string vector without roxygen comment
