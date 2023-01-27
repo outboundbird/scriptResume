@@ -1,12 +1,12 @@
 # scriptResume
 I wrote this package to make peace with my own laziness. My routine scripting
-work requires freuent documentation process. This R adding package was born
+work requires frequent documentation process. This R addin package was born
 to facilitate coding experience. And of course, all the default parameters are set
-to fit my own need. :zany_face: To achieve the best user experience, I would use these
+to fit my own need. :zany_face: To achieve the best user experience, I  use these
 addin functions with keyboard binding short cuts in VScode or other IDEs that allow
 user defined keyboard shortcuts.
 
-*I'm not sure how relevant this package can be outside of my current workplace setting.* As I get lazier, I will add more addin functions.
+*I'm not sure how relevant this package can be outside of my current workplace setting.* As I get lazier, I will add more addin functions and of course, the existing functions will be tailed to my future needs. :hear_no_evil:
 
 # Installation
 `scriptResume` summarized input/output lib usage from a R script.
@@ -28,8 +28,7 @@ devtools::install_github("outboundbird/scriptResume")
 
 # Features
 ## Addin features
-- insert header
-    *auto detect and fill*:
+- `insert header` *auto detect and fill*:
     - input/ output file and path
     - libraries used in the script
     - COMPUND/STUDY/ANALYSIS triplet code
@@ -40,22 +39,23 @@ devtools::install_github("outboundbird/scriptResume")
 an example of inserted header:
 ```
 # ******************************************************************************
-# Property of xxx
+# Property of whom I sell my intellectual products to
 # Program name     : temp.R
-# Description      :
+# Description      : why I spend hours on this file
 # Author           : my name
 # Compound number  : SAR123
 # Study code       : LPS123
-# Analysis code    : BMKCSR
+# Analysis code    : BMK-CSR
 # Date created     : 2023-01-27
-# Input files      :
-# Input programs   :
+# Input files      : data/data.csv
+# Input programs   : this_file.R
 # Packages needed  : abc,
+#                    devtools,
 #                    dplyr,
 #                    stringr
 # Outputs created  :
 # R version        : R version 4.1.0 (2021-05-18)
-# Platform         : Linux-4.4.0-19041-Microsoft
+# Platform         : Windows-10 x64
 # ******************************************************************************
 # Modification status :
 # In progress | 2023-01-27 | my name
