@@ -19,6 +19,16 @@ Description: Transform selected text into roxygen commented text
 Binding: selection2roxygen
 Interactive: false
 
+Name: Roxygen quote
+Description: Transform selected text into roxygen quoted text
+Binding: selection2roxygen_quote
+Interactive: false
+
+Name: Roxygen uncomment
+Description: Uncomment the selected roxygen comments
+Binding: uncomment_roxygen
+Interactive: false
+
 Name: Upper case
 Description: Transform selected text into upper case text
 Binding: to_upper
