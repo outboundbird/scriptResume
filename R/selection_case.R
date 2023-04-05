@@ -47,7 +47,7 @@ rm_rowID <- function() {
   select_pos <- doc$selection[[1]]$range
   if (nchar(selected) > 0) {
     message(sprintf("You have selected:\n %s",selected))
-    stringr::str_replace_all(selected, '\\[\\d+\\]', '')
+    output <- stringr::str_replace_all(selected, '\\[\\d+\\]', '')
     message(output)
   } else {
     message("Nothing selected.")
