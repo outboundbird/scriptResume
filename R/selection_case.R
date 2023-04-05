@@ -40,8 +40,13 @@ to_lower <- function(){
   rstudioapi::insertText(select_pos, output, id)
 }
 
+
+#' Remove the row ID print out from selected text
+#'
+#' @return RETURN_DESCRIPTION
+#' @export
 rm_rowID <- function() {
-    doc <- rstudioapi::getActiveDocumentContext()
+  doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id
   selected <- doc$selection[[1]]$text
   select_pos <- doc$selection[[1]]$range
