@@ -39,3 +39,20 @@ to_lower <- function(){
   print(select_pos)
   rstudioapi::insertText(select_pos, output, id)
 }
+
+rm_rowID <- function() {
+    doc <- rstudioapi::getActiveDocumentContext()
+  id <- doc$id
+  selected <- doc$selection[[1]]$text
+  select_pos <- doc$selection[[1]]$range
+  if (nchar(selected) > 0) {
+    message(sprintf("You have selected:\n %s",selected))
+    stringr::str_replace_all(selected, '\\[\\d+\\]', '')
+    message(output)
+  } else {
+    message("Nothing selected.")
+    output <- ""
+  }
+  print(select_pos)
+  rstudioapi::insertText(select_pos, output, id)
+}
