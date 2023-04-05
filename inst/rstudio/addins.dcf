@@ -38,3 +38,8 @@ Name: Lower case
 Description: Transform selected text into upper case text
 Binding: to_lower
 Interactive: false
+
+Name: Remove row ID
+Description: Remove the row ID from print out
+Binding: rm_rowID
+Interactive: false
