@@ -43,3 +43,13 @@ Name: Remove row ID
 Description: Remove the row ID from print out
 Binding: rm_rowID
 Interactive: false
+
+Name: to bullet point
+Description: Transform to MD bullet points
+Binding: md_bullet
+Interactive:
+
+Name: to table
+Description: Transform to MD table
+Binding: md_tab
+Interactive: false
