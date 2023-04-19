@@ -41,12 +41,12 @@ md_tab <- function() {
   select_pos <- doc$selection[[1]]$range
   if (nchar(selected) > 0) {
     message(sprintf("You have selected:\n %s", selected))
-    subunit <- str_split(selected, "\\\n") %>%
+    subunit <- stringr::str_split(selected, "\\\n") %>%
       unlist() %>%
-      str_replace_all(":", "\\|") %>%
+      stringr::str_replace_all(":", "\\|") %>%
       padding("|")
 
-    n_bar <- str_count(subunit[1], "\\|")
+    n_bar <- stringr::str_count(subunit[1], "\\|")
     tab_edge <- paste(rep("|", n_bar), collapse = " --- ")
 
     output <- append(subunit, tab_edge, after = 1) %>%
