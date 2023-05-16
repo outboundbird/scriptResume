@@ -1,0 +1,105 @@
+---
+title: "How to use `scriptResume`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{scriptResume}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+`scriptResume` is a R addin package that aims to facilitate the R coding exprience.
+It is especially useful when combining with keyboard short cuts.
+Currently, there are two section of functions implemented.
+
+
+## Editing functions
+
+These addin functions help to facilitate coding process.
+
+- Objects to quoted text
+- Remove row ID
+- Upper case
+- Lower case
+- Roxygen comment
+- Roxygen uncomment
+- Roxygen quote
+- to bullet point
+- to table
+
+### Copy n paste related features
+`Object to quoted text`
+
+`Remove row ID` remove the row IDs from the text copied from the console.
+
+```
+ [1] "1 m = 722"   "10 m = 584"  "11 m = 427"  "12 m = 380"
+ [5] "13 m = 243"  "14 m = 211"  "15 m = 321"  "16 m = 316"
+ [9] "17 m = 220"  "18 m = 152"  "19 m = 1906" "2 m = 737"
+[13] "20 m = 164"  "21 m = 108"  "22 m = 269"  "3 m = 507"
+[17] "4 m = 498"   "5 m = 412"   "6 m = 7836"  "7 m = 569"
+[21] "8 m = 379"   "9 m = 297"
+```
+to
+```
+  "1 m = 722"   "10 m = 584"  "11 m = 427"  "12 m = 380"
+  "13 m = 243"  "14 m = 211"  "15 m = 321"  "16 m = 316"
+  "17 m = 220"  "18 m = 152"  "19 m = 1906" "2 m = 737"
+ "20 m = 164"  "21 m = 108"  "22 m = 269"  "3 m = 507"
+ "4 m = 498"   "5 m = 412"   "6 m = 7836"  "7 m = 569"
+ "8 m = 379"   "9 m = 297"
+```
+
+`Upper case` and `Lower case`
+
+### Roxygen formatting features
+
+`Roxygen comment`
+
+`Roxygen uncomment`
+
+`Roxygen quote`
+
+### Markdown related features
+
+`to bullet point` transform
+```
+point 1
+point 2
+point 3
+```
+to
+
+
+`to table` transform a colon separated entry into `md` table format. For example,
+
+```
+a:b:c
+1:2:3
+4:5:6
+```
+to
+
+|a|b|c|
+| --- | --- | --- |
+|1|2|3|
+|4|5|6|
+
+## Script reading functions
+These addin functions read through the currently active script and summarize the script.
+The functions include:
+
+- Insert unique libraries
+- Insert header
+
+### Insert unique libraries
+
+This function reads through the script and collects the libraries used throughout
+the script. The code calls libraries such as `library()`, `require()`, `lib::` are
+collected.
