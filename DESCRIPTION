@@ -15,3 +15,7 @@ Imports:
     dplyr,
     stats,
     magrittr
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

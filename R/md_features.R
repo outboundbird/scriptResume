@@ -8,7 +8,7 @@ md_bullet <- function() {
   select_pos <- doc$selection[[1]]$range
   if (nchar(selected) > 0) {
     message(sprintf("You have selected:\n %s",selected))
-    output <- stringr::str_replace_all(txt, "\\n","\\\n - ")
+    output <- stringr::str_replace_all(selected, "\\n","\\\n - ")
     message(output)
   } else {
     message("Nothing selected.")
