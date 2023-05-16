@@ -3,10 +3,8 @@
 #' @param pattern_split character, pattern for spliting
 #' @param pattern character for extract contents
 #'
-#' @return
+#' @return functions
 #' @export
-#'
-#' @examples
 get_names <- function(pattern_split, pattern) {
     function(line) {
         extract <- stringr::str_split(line, pattern_split)[[1]]
@@ -20,8 +18,20 @@ get_names <- function(pattern_split, pattern) {
     }
 }
 
+
+#' name of importing files
+#'
+#' @param line string entry.
+#'
+#' @return string, file name
 import_name <- get_names("read|load", ".+(?=\\s*\\<\\-)")
 
+
+#' name of exporting file
+#'
+#' @param line string entry.
+#'
+#' @return string, file name
 export_name <- get_names(
     "(save)|(write)[A-Zaz\\.a-z]*",
     "[^(].+(?=\\s*\\,)"
