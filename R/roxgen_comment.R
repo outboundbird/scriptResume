@@ -95,6 +95,13 @@ selection2roxygen_quote <- function(){
 }
 
 
+#' uncomment roxygen format comment
+#'
+#'
+#' @param  Null.
+#'
+#' @return text without roxygen format
+#' @export
 uncomment_roxygen <-  function(){
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id

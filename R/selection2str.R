@@ -13,7 +13,7 @@ tostring <- function(line) {
 }
 
 #' make the selected text into string/characters
-#'
+#' @param Null
 #' @return quoted text
 #' @export
 selection2str <- function() {

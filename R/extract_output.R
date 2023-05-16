@@ -7,13 +7,13 @@
 #'
 #' @examples extr_output_file("saveRDS('test.Rds')")
 extr_output_file <- function(line) {
-  pattern_out <- '(save)|(write)[A-Zaz\\.a-z]*'
+  pattern_out <- "(save)|(write)[A-Zaz\\.a-z]*"
   extract <- stringr::str_split(line, pattern_out)[[1]]
   no_target <- is.na(stringr::str_extract(line, pattern_out))
-  if(no_target){
+  if (no_target) {
     return(NULL)
-  }else{
-    pattern = "(?<=\'|\")[^\'|\"]*"
+  } else {
+    pattern <- "(?<=\'|\")[^\'|\"]*"
     rst <- stringr::str_extract(extract, pattern)
     return(rst[!is.na(rst)])
   }

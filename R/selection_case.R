@@ -1,5 +1,5 @@
 #' Tranform selected text to upper case
-#'
+#' @param Null
 #' @return
 #' @export
 to_upper <- function(){
@@ -20,7 +20,7 @@ to_upper <- function(){
 }
 
 #' Tranform selected text to lower case
-#'
+#' @param Null
 #' @return
 #' @export
 to_lower <- function(){
@@ -42,7 +42,7 @@ to_lower <- function(){
 
 
 #' Remove the row ID print out from selected text
-#'
+#' @param Null
 #' @return RETURN_DESCRIPTION
 #' @export
 rm_rowID <- function() {
