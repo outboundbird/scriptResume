@@ -1,5 +1,6 @@
 ---
 title: "How to use `scriptResume`"
+date: "created: 2023-05-16, updated: `r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{scriptResume}
