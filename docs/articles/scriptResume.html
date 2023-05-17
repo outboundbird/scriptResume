@@ -82,9 +82,12 @@
 <li>to table</li>
 </ul>
 <div class="section level3">
-<h3 id="copy-n-paste-related-features">Copy n paste related features<a class="anchor" aria-label="anchor" href="#copy-n-paste-related-features"></a>
+<h3 id="copy-paste-related-features">Copy &amp; paste related features<a class="anchor" aria-label="anchor" href="#copy-paste-related-features"></a>
 </h3>
-<p><code>Object to quoted text</code></p>
+<p><code>Object to quoted text</code> transform a chunk of selected text with comma separator into a string vector. from</p>
+<pre><code>a, b, c, d</code></pre>
+<p>to</p>
+<pre><code><span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span><span class="op">)</span></span></code></pre>
 <p><code>Remove row ID</code> remove the row IDs from the text copied from the console.</p>
 <pre><code> [1] "1 m = 722"   "10 m = 584"  "11 m = 427"  "12 m = 380"
  [5] "13 m = 243"  "14 m = 211"  "15 m = 321"  "16 m = 316"
@@ -172,9 +175,9 @@ point 3</code></pre>
 <p>The other libraries are used in this Rmd file but not shown in this example.</p>
 </div>
 <div class="section level3">
-<h3 id="insert-header">Insert header<a class="anchor" aria-label="anchor" href="#insert-header"></a>
+<h3 id="insert-header-of-a-script">Insert header of a script<a class="anchor" aria-label="anchor" href="#insert-header-of-a-script"></a>
 </h3>
-<p>This function read through the currently active R script and summarize the script with following information of the current computing enviroment:</p>
+<p>This function read through the currently active R script and summarize the script with following information of the current computing enviroment, hence the name of the package <code>scriptResume</code>.</p>
 <pre><code><span><span class="co"># ******************************************************************************</span></span>
 <span><span class="co"># Property of company</span></span>
 <span><span class="co"># Program name     : scriptResume.R</span></span>
@@ -202,12 +205,12 @@ point 3</code></pre>
 <span><span class="co"># In progress | 2023-05-16 | author</span></span>
 <span><span class="co"># Description:</span></span>
 <span><span class="co"># ******************************************************************************</span></span></code></pre>
-<p>Files imported with funcitons <code>read_xx()</code>, <code><a href="https://rdrr.io/r/base/load.html" class="external-link">load()</a></code> will be collected</p>
+<p>Files imported with funcitons <code>read*()</code>, <code><a href="https://rdrr.io/r/base/load.html" class="external-link">load()</a></code>, <code><a href="https://rdrr.io/r/base/source.html" class="external-link">source()</a></code> will be collected</p>
 <pre><code><span><span class="va">data1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="st">"data/file1.csv"</span><span class="op">)</span></span>
 <span><span class="va">data2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html" class="external-link">readRDS</a></span><span class="op">(</span><span class="st">"data/file2.Rds"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/load.html" class="external-link">load</a></span><span class="op">(</span><span class="st">"data/file3.Rda"</span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span><span class="st">"src/preprocess.R"</span><span class="op">)</span></span></code></pre>
-<p>Files exported with functions <code>write_xx()</code>, <code>save*()</code> will be collected.</p>
+<p>Files exported with functions <code>write*()</code>, <code>save*()</code> will be collected.</p>
 <pre><code><span><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html" class="external-link">write.csv</a></span><span class="op">(</span><span class="va">data2</span>, <span class="st">"data/file2.csv"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/readRDS.html" class="external-link">saveRDS</a></span><span class="op">(</span><span class="va">file3</span>, <span class="st">"data/file3.Rds"</span><span class="op">)</span></span></code></pre>
 <p>Since this function is targeted at pharma industry, it will automatically read the current working directory ant output the triplet information. This illustration is tested in local so this function is not shown in the output.</p>
