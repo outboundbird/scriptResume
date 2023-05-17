@@ -12,7 +12,7 @@ get_names(pattern_split, pattern)
 \item{pattern}{character for extract contents}
 }
 \value{
-
+functions
 }
 \description{
 get_names closure function

@@ -7,7 +7,7 @@
 to_lower()
 }
 \value{
-
+lower case text
 }
 \description{
 Tranform selected text to lower case

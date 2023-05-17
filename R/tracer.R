@@ -4,10 +4,7 @@
 #' @param get_target function object
 #' @param extract_file function object
 #'
-#' @return
 #' @export
-#'
-#' @examples
 tracer <- function(get_target, extract_file) {
   function(line) {
     target <- get_target(line)
@@ -16,8 +13,21 @@ tracer <- function(get_target, extract_file) {
   }
 }
 
+
+#' Tracing inputs
+#'
+#' @param line DESCRIPTION.
+#'
+#' @return list of target and input files
 trace_input <- tracer(import_name, extr_input_file)
+
+
+#' tracing output
+#' @param line DESCRIPTION.
+#'
+#' @return list of target and output files
 trace_output <- tracer(export_name, extr_output_file)
+
 
 #' data_transit, track data transition from readin files
 #'
@@ -26,8 +36,6 @@ trace_output <- tracer(export_name, extr_output_file)
 #'
 #' @return list of transit and target
 #' @export
-#'
-#' @examples
 data_transit <- function(line, target) {
   pattern_target <- paste0(".+\\<\\-\\s*", target, "(?!\\w)")
   extract <- stringr::str_extract(line, pattern_target)

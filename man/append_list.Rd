@@ -12,7 +12,7 @@ append_list(list_obj = list(), ...)
 \item{...}{anything to be appended to the list}
 }
 \value{
-
+list
 }
 \description{
 append list

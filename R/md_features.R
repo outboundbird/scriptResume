@@ -1,3 +1,4 @@
+utils::globalVariables(".")
 #' Selection to markdown bullet point list
 #' @return markdown bulle point list
 #' @export

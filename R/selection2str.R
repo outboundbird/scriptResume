@@ -3,6 +3,7 @@
 #'
 #' @return quoted test
 #' @export
+#' @example
 #' line = "a, b, c"
 #' tostring(line)
 tostring <- function(line) {
@@ -13,7 +14,6 @@ tostring <- function(line) {
 }
 
 #' make the selected text into string/characters
-#' @param Null
 #' @return quoted text
 #' @export
 selection2str <- function() {

@@ -51,10 +51,8 @@ redo_roxycomment <- function(text) {
 
 #' Roxygen comment on currently selected section
 #'
-#' @return
+#' @return text with roxygen comment format
 #' @export
-#'
-#' @examples
 selection2roxygen <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id
@@ -96,10 +94,6 @@ selection2roxygen_quote <- function() {
 
 
 #' uncomment roxygen format comment
-#'
-#'
-#' @param  Null.
-#'
 #' @return text without roxygen format
 #' @export
 uncomment_roxygen <- function() {
