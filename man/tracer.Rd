@@ -11,9 +11,6 @@ tracer(get_target, extract_file)
 
 \item{extract_file}{function object}
 }
-\value{
-
-}
 \description{
 trace to trace certain pattern
 }

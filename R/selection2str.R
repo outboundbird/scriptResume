@@ -3,7 +3,7 @@
 #'
 #' @return quoted test
 #' @export
-#' @example
+#' @examples
 #' line = "a, b, c"
 #' tostring(line)
 tostring <- function(line) {

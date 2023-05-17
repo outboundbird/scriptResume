@@ -6,9 +6,6 @@
 \usage{
 uncomment_roxygen()
 }
-\arguments{
-\item{Null.}{}
-}
 \value{
 text without roxygen format
 }
