@@ -7,5 +7,5 @@
 #'
 #' @examples current_fname("~/Work/cheat_sheet/snippets.R")
 current_fname <- function(line) {
-  return(stringr::str_extract(line, '\\w+\\.R'))
+  return(stringr::str_extract(line, "\\w+\\.R"))
 }

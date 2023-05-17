@@ -55,13 +55,13 @@ redo_roxycomment <- function(text) {
 #' @export
 #'
 #' @examples
-selection2roxygen <- function(){
+selection2roxygen <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id
   selected <- doc$selection[[1]]$text
   select_pos <- doc$selection[[1]]$range
   if (nchar(selected) > 0) {
-    message(sprintf("You have selected:\n %s",selected))
+    message(sprintf("You have selected:\n %s", selected))
     output <- convert_roxygen(selected)
     message(output)
   } else {
@@ -77,13 +77,13 @@ selection2roxygen <- function(){
 #'
 #' @return quoted roxygen text
 #' @export
-selection2roxygen_quote <- function(){
+selection2roxygen_quote <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id
   selected <- doc$selection[[1]]$text
   select_pos <- doc$selection[[1]]$range
   if (nchar(selected) > 0) {
-    message(sprintf("You have selected:\n %s",selected))
+    message(sprintf("You have selected:\n %s", selected))
     output <- roxygen_quote(selected)
     message(output)
   } else {
@@ -102,13 +102,13 @@ selection2roxygen_quote <- function(){
 #'
 #' @return text without roxygen format
 #' @export
-uncomment_roxygen <-  function(){
+uncomment_roxygen <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id
   selected <- doc$selection[[1]]$text
   select_pos <- doc$selection[[1]]$range
   if (nchar(selected) > 0) {
-    message(sprintf("You have selected:\n %s",selected))
+    message(sprintf("You have selected:\n %s", selected))
     output <- redo_roxycomment(selected)
     message(output)
   } else {
