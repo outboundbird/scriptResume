@@ -7,7 +7,7 @@
 selection2roxygen()
 }
 \value{
-
+text with roxygen comment format
 }
 \description{
 Roxygen comment on currently selected section

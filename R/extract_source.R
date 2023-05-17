@@ -7,13 +7,13 @@
 #'
 #' @examples extr_src_file('source("src/utils/utils.R")')
 extr_src_file <- function(line) {
-  pattern_out <- 'source'
+  pattern_out <- "source"
   extract <- stringr::str_split(line, pattern_out)[[1]]
   no_target <- is.na(stringr::str_extract(line, pattern_out))
   if (no_target) {
     return(NULL)
-  }else{
-    pattern = "(?<=\'|\")[^\'|\"]*"
+  } else {
+    pattern <- "(?<=\'|\")[^\'|\"]*"
     rst <- stringr::str_extract(extract, pattern)
     return(rst[!is.na(rst)])
   }
@@ -28,5 +28,5 @@ extr_src_file <- function(line) {
 #' @export
 #'
 extract_uniq_src <- function(doc_contents) {
-  return(unique(unlist(lapply(doc_contents ,extr_src_file))))
+  return(unique(unlist(lapply(doc_contents, extr_src_file))))
 }

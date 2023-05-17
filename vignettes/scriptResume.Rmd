@@ -1,6 +1,10 @@
 ---
 title: "How to use `scriptResume`"
-output: rmarkdown::html_vignette
+date: "created: 2023-05-16, updated: `r Sys.Date()`"
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
 vignette: >
   %\VignetteIndexEntry{scriptResume}
   %\VignetteEngine{knitr::rmarkdown}
@@ -60,11 +64,20 @@ to
 
 ### Roxygen formatting features
 
-`Roxygen comment`
+These features are used in the R script instead of R Markdown files. They will
+transform the text into Roxygen format comment or quoted text in Roxygen format.
+Alternatively it can back-tranform a chunk of Roxygen comment format text back
+to text in R script.
 
-`Roxygen uncomment`
+`Roxygen comment`: e.g.
+from
+`This is my comment.`
+to
+`#' This is my comment.`
 
-`Roxygen quote`
+`Roxygen uncomment`: e.g. from `#' Recommenting` to `Recommenting`
+
+`Roxygen quote`: e.g. from `Some quotes` to `#' > Some quotes`
 
 ### Markdown related features
 
@@ -76,6 +89,9 @@ point 3
 ```
 to
 
+ - point 1
+ - point 2
+ - point 3
 
 `to table` transform a colon separated entry into `md` table format. For example,
 
@@ -101,5 +117,79 @@ The functions include:
 ### Insert unique libraries
 
 This function reads through the script and collects the libraries used throughout
-the script. The code calls libraries such as `library()`, `require()`, `lib::` are
-collected.
+the script. The function will collect libraries called by
+`library()`, `require()`, `lib::` and insert these libraries at current cursor
+position. It will automatically remove duplicated usage of the same library.
+For example,
+
+```
+require(abc)
+libraries(abc)
+xyz::xyz()
+```
+to
+
+```
+library(abc)
+library(knitr)
+library(lib)
+library(rmarkdown)
+library(xyz)
+```
+The other libraries are used in this Rmd file but not shown in this example.
+
+### Insert header
+
+This function read through the currently active R script and summarize the script
+with following information of the current computing enviroment:
+
+
+```
+# ******************************************************************************
+# Property of company
+# Program name     : scriptResume.R
+# Description      :
+# Author           : author
+# Compound number  : SAR
+# Study code       :
+# Analysis code    : BMK-
+# Date created     : 2023-05-16
+# Input files      : data/file1.csv,
+#                    data/file2.Rds,
+#                    data/file3.Rda
+# Input programs   : src/preprocess.R
+# Packages needed  : abc,
+#                    knitr,
+#                    lib,
+#                    rmarkdown,
+#                    xyz
+# Outputs created  : data/file2.csv,
+#                    data/file3.Rds
+# R version        : R version 4.1.0 (2021-05-18)
+# Platform         : Linux-4.4.0-19041-Microsoft
+# ******************************************************************************
+# Modification status :
+# In progress | 2023-05-16 | author
+# Description:
+# ******************************************************************************
+```
+
+Files imported with funcitons `read_xx()`, `load()` will be collected
+
+```
+data1 <- read.csv("data/file1.csv")
+data2 <- readRDS("data/file2.Rds")
+load("data/file3.Rda")
+source("src/preprocess.R")
+```
+
+Files exported with functions `write_xx()`, `save*()` will be collected.
+
+```
+write.csv(data2, "data/file2.csv")
+saveRDS(file3, "data/file3.Rds")
+```
+
+Since this function is targeted at pharma industry, it will automatically read
+the current working directory ant output the triplet information. This illustration
+is tested in local so this function is not shown in the output.

@@ -10,10 +10,12 @@ remove_dup_libs <- function() {
   # n_libs <- length(doc_libs)
   # col <- sapply(doc_libs, nchar)
   cusor_pos <- rstudioapi::primary_selection(
-    rstudioapi::getActiveDocumentContext())
+    rstudioapi::getActiveDocumentContext()
+  )
 
   cursor_row <- cusor_pos$range$start[1]
   rstudioapi::insertText(
     c(cursor_row, 1),
-    paste0("library(", doc_libs , ")", collapse = "\n"))
+    paste0("library(", doc_libs, ")", collapse = "\n")
+  )
 }

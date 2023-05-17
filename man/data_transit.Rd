@@ -12,7 +12,7 @@ data_transit(line, target)
 \item{target}{char, the key word target}
 }
 \value{
-
+list of transit and target
 }
 \description{
 data_transit, track data transition from readin files

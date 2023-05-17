@@ -6,13 +6,13 @@
 #' @export
 #'
 #' @examples extract_lib("library(apple)")
-extract_lib <-  function(line) {
-  patterns = c(
-    '(?<=library\\()\\w+',
+extract_lib <- function(line) {
+  patterns <- c(
+    "(?<=library\\()\\w+",
     '(?<=library\\(")\\w+',
     '(?<=require\\(")\\w+',
-    '(?<=require\\()\\w+',
-    '\\w+(?=::)'
+    "(?<=require\\()\\w+",
+    "\\w+(?=::)"
   )
   lib <- lapply(patterns, function(p) {
     out <- stringr::str_extract(line, p)
@@ -30,9 +30,7 @@ extract_lib <-  function(line) {
 #'
 #' @return unique libraries used in the document
 #' @export
-#'
-#' @examples
 extract_uniq_libs <- function(doc_contents) {
-  libs <- unique(unlist(lapply(doc_contents ,extract_lib)))
+  libs <- unique(unlist(lapply(doc_contents, extract_lib)))
   return(sort(libs))
 }

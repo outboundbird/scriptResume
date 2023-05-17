@@ -15,3 +15,7 @@ quoted test
 \description{
 Convert object tostring
 }
+\examples{
+line = "a, b, c"
+tostring(line)
+}

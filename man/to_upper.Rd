@@ -7,7 +7,7 @@
 to_upper()
 }
 \value{
-
+upper case text
 }
 \description{
 Tranform selected text to upper case

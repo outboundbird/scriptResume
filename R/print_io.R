@@ -27,11 +27,11 @@ print.io <- function(rst) {
   if (length(transit_df)) {
     it <- merge(input_df, transit_df, by = "target", all = T)
     to <- merge(transit_df, output_df,
-                by.x = "transit", by.y = "target", all = T
+      by.x = "transit", by.y = "target", all = T
     )
     ito <- merge(it, to,
-                 by.x = c("transit", "target"),
-                 by.y = c("transit", "target"), all = T
+      by.x = c("transit", "target"),
+      by.y = c("transit", "target"), all = T
     )
     dplyr::distinct(ito)
     summary_tab <- stats::setNames(

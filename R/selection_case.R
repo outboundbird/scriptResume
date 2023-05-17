@@ -1,14 +1,13 @@
 #' Tranform selected text to upper case
-#'
-#' @return
+#' @return upper case text
 #' @export
-to_upper <- function(){
+to_upper <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id
   selected <- doc$selection[[1]]$text
   select_pos <- doc$selection[[1]]$range
   if (nchar(selected) > 0) {
-    message(sprintf("You have selected:\n %s",selected))
+    message(sprintf("You have selected:\n %s", selected))
     output <- toupper(selected)
     message(output)
   } else {
@@ -20,16 +19,15 @@ to_upper <- function(){
 }
 
 #' Tranform selected text to lower case
-#'
-#' @return
+#' @return lower case text
 #' @export
-to_lower <- function(){
+to_lower <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id
   selected <- doc$selection[[1]]$text
   select_pos <- doc$selection[[1]]$range
   if (nchar(selected) > 0) {
-    message(sprintf("You have selected:\n %s",selected))
+    message(sprintf("You have selected:\n %s", selected))
     output <- tolower(selected)
     message(output)
   } else {
@@ -42,8 +40,7 @@ to_lower <- function(){
 
 
 #' Remove the row ID print out from selected text
-#'
-#' @return RETURN_DESCRIPTION
+#' @return text with ID removed
 #' @export
 rm_rowID <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
@@ -51,8 +48,8 @@ rm_rowID <- function() {
   selected <- doc$selection[[1]]$text
   select_pos <- doc$selection[[1]]$range
   if (nchar(selected) > 0) {
-    message(sprintf("You have selected:\n %s",selected))
-    output <- stringr::str_replace_all(selected, '\\[\\d+\\]', '')
+    message(sprintf("You have selected:\n %s", selected))
+    output <- stringr::str_replace_all(selected, "\\[\\d+\\]", "")
     message(output)
   } else {
     message("Nothing selected.")
