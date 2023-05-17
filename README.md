@@ -1,8 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
 
 # scriptResume
 
@@ -39,60 +34,3 @@ or
 <img src="vignettes/misc/rstudio_shot.PNG" alt="Screenshot in R studio" width="264"/>
 
 <img src="vignettes/misc/vscode_shot.png" alt="Screenshot in VScode" width="411"/>
-
-## Addin features
-
--   `insert header` *auto detect and fill*:
-
-    -   input/ output file and path
-    -   libraries used in the script
-    -   COMPUND/STUDY/ANALYSIS triplet code
-    -   file generation date, file update date
-    -   R version
-    -   System info
-
-an example of inserted header:
-
-    # ******************************************************************************
-    # Property of whom I sell my intellectual products to
-    # Program name     : temp.R
-    # Description      : why I spend hours on this file
-    # Author           : my name
-    # Compound number  : SAR123
-    # Study code       : LPS123
-    # Analysis code    : BMK-CSR
-    # Date created     : 2023-01-27
-    # Input files      : data/data.csv
-    # Input programs   : this_file.R
-    # Packages needed  : abc,
-    #                    devtools,
-    #                    dplyr,
-    #                    stringr
-    # Outputs created  :
-    # R version        : R version 4.1.0 (2021-05-18)
-    # Platform         : Windows-10 x64
-    # ******************************************************************************
-    # Modification status :
-    # In progress | 2023-01-27 | my name
-    # Description:
-    # ******************************************************************************
-
--   insert unique libraries if you happen to read a messy script that
-    libs are specified throughout the script. this function can help you
-    to summarize the libs used in the currently open file.
-
--   object to quoted text a friend for copy-pasters.select a section of
-    text that are separated by comma then transform them into a quoted
-    vector.e.g, from `a, b, c` to `c("a", "b", "c")`
-
--   transform multiple text selection into Roxygen comments
-
--   uncomment Roxygen comments
-
--   transform to Roxygen comments with MD quote mark
-
--   transform selected text to upper or lower cases
-
-## Package features
-
--   extract libraries used in a script

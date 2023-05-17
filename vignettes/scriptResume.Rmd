@@ -1,10 +1,7 @@
 ---
-title: "How to use `scriptResume`"
+title: "R Addin - scriptResume"
 date: "created: 2023-05-16, updated: `r Sys.Date()`"
-output:
-  prettydoc::html_pretty:
-    theme: cayman
-    highlight: github
+output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{scriptResume}
   %\VignetteEngine{knitr::rmarkdown}
@@ -18,9 +15,10 @@ knitr::opts_chunk$set(
 )
 ```
 
-`scriptResume` is a R addin package that aims to facilitate the R coding exprience.
-It is especially useful when combining with keyboard short cuts.
-Currently, there are two section of functions implemented.
+`scriptResume` is a R addin package that aims to facilitate the coding process.
+It comes especially handy after combined with keyboard short cuts.
+Currently, there are two section of functions implemented - editing functions and
+script reading functions.
 
 
 ## Editing functions
@@ -38,8 +36,9 @@ These addin functions help to facilitate coding process.
 - to table
 
 ### Copy & paste related features
-`Object to quoted text` transform a chunk of selected text with comma separator into
-a string vector.
+
+`Object to quoted text` transforms a chunk of selected text with comma separator into
+a string vector. For example,
 from
 ```
 a, b, c, d
@@ -69,12 +68,12 @@ to
  "8 m = 379"   "9 m = 297"
 ```
 
-`Upper case` and `Lower case`
+`Upper case` and `Lower case` transform the selected text into upper or lower cased format.
 
 ### Roxygen formatting features
 
 These features are used in the R script instead of R Markdown files. They will
-transform the text into Roxygen format comment or quoted text in Roxygen format.
+transform the selected text into Roxygen format comment or quoted text in Roxygen format.
 Alternatively it can back-tranform a chunk of Roxygen comment format text back
 to text in R script.
 
@@ -90,7 +89,8 @@ to
 
 ### Markdown related features
 
-`to bullet point` transform
+`to bullet point` transforms selected text into bullet points. The selected text
+has to be separated by `\n`.
 ```
 point 1
 point 2
@@ -102,7 +102,7 @@ to
  - point 2
  - point 3
 
-`to table` transform a colon separated entry into `md` table format. For example,
+`to table` transforms selected text, which is colon separated entry into `md` table format. For example,
 
 ```
 a:b:c
@@ -123,7 +123,7 @@ The functions include:
 - Insert unique libraries
 - Insert header
 
-### Insert unique libraries
+### Unique libraries
 
 This function reads through the script and collects the libraries used throughout
 the script. The function will collect libraries called by
@@ -146,8 +146,10 @@ library(rmarkdown)
 library(xyz)
 ```
 The other libraries are used in this Rmd file but not shown in this example.
+You will find this function handy when reading a messy script that the libraries
+are imported from every possible random place.
 
-### Insert header of a script
+### a header summary of a script
 
 This function read through the currently active R script and summarize the script
 with following information of the current computing enviroment, hence the name of the package `scriptResume`.
@@ -200,5 +202,14 @@ saveRDS(file3, "data/file3.Rds")
 ```
 
 Since this function is targeted at pharma industry, it will automatically read
-the current working directory ant output the triplet information. This illustration
-is tested in local so this function is not shown in the output.
+the current working directory and output the triplet information. This illustration
+is tested in local so this function is not shown in the output above.
+
+Below is an example for a dummy directory. Since I'm always working on biomarker analysis, the analysis code always starts with BMK.
+
+```
+# Author           : e123456
+# Compound number  : SAR123
+# Study code       : LPS123
+# Analysis code    : BMK-CSR
+```

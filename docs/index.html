@@ -75,58 +75,6 @@
 </h1>
 <p><img src="articles/misc/rstudio_shot.PNG" alt="Screenshot in R studio" width="264"></p>
 <p><img src="articles/misc/vscode_shot.png" alt="Screenshot in VScode" width="411"></p>
-<div class="section level2">
-<h2 id="addin-features">Addin features<a class="anchor" aria-label="anchor" href="#addin-features"></a>
-</h2>
-<ul><li>
-<p><code>insert header</code> <em>auto detect and fill</em>:</p>
-<ul>
-<li>input/ output file and path</li>
-<li>libraries used in the script</li>
-<li>COMPUND/STUDY/ANALYSIS triplet code</li>
-<li>file generation date, file update date</li>
-<li>R version</li>
-<li>System info</li>
-</ul>
-</li></ul>
-<p>an example of inserted header:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="co"># ******************************************************************************</span></a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="co"># Property of whom I sell my intellectual products to</span></a>
-<a class="sourceLine" id="cb3-3" title="3"><span class="co"># Program name     : temp.R</span></a>
-<a class="sourceLine" id="cb3-4" title="4"><span class="co"># Description      : why I spend hours on this file</span></a>
-<a class="sourceLine" id="cb3-5" title="5"><span class="co"># Author           : my name</span></a>
-<a class="sourceLine" id="cb3-6" title="6"><span class="co"># Compound number  : SAR123</span></a>
-<a class="sourceLine" id="cb3-7" title="7"><span class="co"># Study code       : LPS123</span></a>
-<a class="sourceLine" id="cb3-8" title="8"><span class="co"># Analysis code    : BMK-CSR</span></a>
-<a class="sourceLine" id="cb3-9" title="9"><span class="co"># Date created     : 2023-01-27</span></a>
-<a class="sourceLine" id="cb3-10" title="10"><span class="co"># Input files      : data/data.csv</span></a>
-<a class="sourceLine" id="cb3-11" title="11"><span class="co"># Input programs   : this_file.R</span></a>
-<a class="sourceLine" id="cb3-12" title="12"><span class="co"># Packages needed  : abc,</span></a>
-<a class="sourceLine" id="cb3-13" title="13"><span class="co">#                    devtools,</span></a>
-<a class="sourceLine" id="cb3-14" title="14"><span class="co">#                    dplyr,</span></a>
-<a class="sourceLine" id="cb3-15" title="15"><span class="co">#                    stringr</span></a>
-<a class="sourceLine" id="cb3-16" title="16"><span class="co"># Outputs created  :</span></a>
-<a class="sourceLine" id="cb3-17" title="17"><span class="co"># R version        : R version 4.1.0 (2021-05-18)</span></a>
-<a class="sourceLine" id="cb3-18" title="18"><span class="co"># Platform         : Windows-10 x64</span></a>
-<a class="sourceLine" id="cb3-19" title="19"><span class="co"># ******************************************************************************</span></a>
-<a class="sourceLine" id="cb3-20" title="20"><span class="co"># Modification status :</span></a>
-<a class="sourceLine" id="cb3-21" title="21"><span class="co"># In progress | 2023-01-27 | my name</span></a>
-<a class="sourceLine" id="cb3-22" title="22"><span class="co"># Description:</span></a>
-<a class="sourceLine" id="cb3-23" title="23"><span class="co"># ******************************************************************************</span></a></code></pre></div>
-<ul>
-<li><p>insert unique libraries if you happen to read a messy script that libs are specified throughout the script. this function can help you to summarize the libs used in the currently open file.</p></li>
-<li><p>object to quoted text a friend for copy-pasters.select a section of text that are separated by comma then transform them into a quoted vector.e.g, from <code>a, b, c</code> to <code>c("a", "b", "c")</code></p></li>
-<li><p>transform multiple text selection into Roxygen comments</p></li>
-<li><p>uncomment Roxygen comments</p></li>
-<li><p>transform to Roxygen comments with MD quote mark</p></li>
-<li><p>transform selected text to upper or lower cases</p></li>
-</ul>
-</div>
-<div class="section level2">
-<h2 id="package-features">Package features<a class="anchor" aria-label="anchor" href="#package-features"></a>
-</h2>
-<ul><li>extract libraries used in a script</li></ul>
-</div>
 </div>
 
   </main><aside class="col-md-3"><div class="license">
