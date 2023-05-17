@@ -1,7 +1,7 @@
 ---
 title: "How to use `scriptResume`"
 date: "created: 2023-05-16, updated: `r Sys.Date()`"
-output: 
+output:
   prettydoc::html_pretty:
     theme: cayman
     highlight: github
@@ -37,8 +37,17 @@ These addin functions help to facilitate coding process.
 - to bullet point
 - to table
 
-### Copy n paste related features
-`Object to quoted text`
+### Copy & paste related features
+`Object to quoted text` transform a chunk of selected text with comma separator into
+a string vector.
+from
+```
+a, b, c, d
+```
+to
+```
+c("a", "b", "c", "d")
+```
 
 `Remove row ID` remove the row IDs from the text copied from the console.
 
@@ -138,10 +147,10 @@ library(xyz)
 ```
 The other libraries are used in this Rmd file but not shown in this example.
 
-### Insert header
+### Insert header of a script
 
 This function read through the currently active R script and summarize the script
-with following information of the current computing enviroment:
+with following information of the current computing enviroment, hence the name of the package `scriptResume`.
 
 
 ```
@@ -174,7 +183,7 @@ with following information of the current computing enviroment:
 # ******************************************************************************
 ```
 
-Files imported with funcitons `read_xx()`, `load()` will be collected
+Files imported with funcitons `read*()`, `load()`, `source()` will be collected
 
 ```
 data1 <- read.csv("data/file1.csv")
@@ -183,7 +192,7 @@ load("data/file3.Rda")
 source("src/preprocess.R")
 ```
 
-Files exported with functions `write_xx()`, `save*()` will be collected.
+Files exported with functions `write*()`, `save*()` will be collected.
 
 ```
 write.csv(data2, "data/file2.csv")
