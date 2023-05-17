@@ -6,12 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="scriptResume">
-<title>How to use `scriptResume` • scriptResume</title>
+<title>R Addin - scriptResume • scriptResume</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="How to use `scriptResume`">
+<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="R Addin - scriptResume">
 <meta property="og:description" content="scriptResume">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -55,7 +55,7 @@
 
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="" class="logo" alt=""><h1>How to use `scriptResume`</h1>
+      <img src="" class="logo" alt=""><h1>R Addin - scriptResume</h1>
             
             <h4 data-toc-skip class="date">created: 2023-05-16, updated: 2023-05-17</h4>
       
@@ -65,7 +65,7 @@
 
     
     
-<p><code>scriptResume</code> is a R addin package that aims to facilitate the R coding exprience. It is especially useful when combining with keyboard short cuts. Currently, there are two section of functions implemented.</p>
+<p><code>scriptResume</code> is a R addin package that aims to facilitate the coding process. It comes especially handy after combined with keyboard short cuts. Currently, there are two section of functions implemented - editing functions and script reading functions.</p>
 <div class="section level2">
 <h2 id="editing-functions">Editing functions<a class="anchor" aria-label="anchor" href="#editing-functions"></a>
 </h2>
@@ -84,7 +84,7 @@
 <div class="section level3">
 <h3 id="copy-paste-related-features">Copy &amp; paste related features<a class="anchor" aria-label="anchor" href="#copy-paste-related-features"></a>
 </h3>
-<p><code>Object to quoted text</code> transform a chunk of selected text with comma separator into a string vector. from</p>
+<p><code>Object to quoted text</code> transforms a chunk of selected text with comma separator into a string vector. For example, from</p>
 <pre><code>a, b, c, d</code></pre>
 <p>to</p>
 <pre><code><span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span><span class="op">)</span></span></code></pre>
@@ -102,12 +102,12 @@
  "20 m = 164"  "21 m = 108"  "22 m = 269"  "3 m = 507"
  "4 m = 498"   "5 m = 412"   "6 m = 7836"  "7 m = 569"
  "8 m = 379"   "9 m = 297"</code></pre>
-<p><code>Upper case</code> and <code>Lower case</code></p>
+<p><code>Upper case</code> and <code>Lower case</code> transform the selected text into upper or lower cased format.</p>
 </div>
 <div class="section level3">
 <h3 id="roxygen-formatting-features">Roxygen formatting features<a class="anchor" aria-label="anchor" href="#roxygen-formatting-features"></a>
 </h3>
-<p>These features are used in the R script instead of R Markdown files. They will transform the text into Roxygen format comment or quoted text in Roxygen format. Alternatively it can back-tranform a chunk of Roxygen comment format text back to text in R script.</p>
+<p>These features are used in the R script instead of R Markdown files. They will transform the selected text into Roxygen format comment or quoted text in Roxygen format. Alternatively it can back-tranform a chunk of Roxygen comment format text back to text in R script.</p>
 <p><code>Roxygen comment</code>: e.g. from <code>This is my comment.</code> to <code>#' This is my comment.</code></p>
 <p><code>Roxygen uncomment</code>: e.g. from <code>#' Recommenting</code> to <code>Recommenting</code></p>
 <p><code>Roxygen quote</code>: e.g. from <code>Some quotes</code> to <code>#' &gt; Some quotes</code></p>
@@ -115,7 +115,7 @@
 <div class="section level3">
 <h3 id="markdown-related-features">Markdown related features<a class="anchor" aria-label="anchor" href="#markdown-related-features"></a>
 </h3>
-<p><code>to bullet point</code> transform</p>
+<p><code>to bullet point</code> transforms selected text into bullet points. The selected text has to be separated by <code>\n</code>.</p>
 <pre><code>point 1
 point 2
 point 3</code></pre>
@@ -125,7 +125,7 @@ point 3</code></pre>
 <li>point 2</li>
 <li>point 3</li>
 </ul>
-<p><code>to table</code> transform a colon separated entry into <code>md</code> table format. For example,</p>
+<p><code>to table</code> transforms selected text, which is colon separated entry into <code>md</code> table format. For example,</p>
 <pre><code><span><span class="va">a</span><span class="op">:</span><span class="va">b</span><span class="op">:</span><span class="va">c</span></span>
 <span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">:</span><span class="fl">3</span></span>
 <span><span class="fl">4</span><span class="op">:</span><span class="fl">5</span><span class="op">:</span><span class="fl">6</span></span></code></pre>
@@ -160,7 +160,7 @@ point 3</code></pre>
 <li>Insert header</li>
 </ul>
 <div class="section level3">
-<h3 id="insert-unique-libraries">Insert unique libraries<a class="anchor" aria-label="anchor" href="#insert-unique-libraries"></a>
+<h3 id="unique-libraries">Unique libraries<a class="anchor" aria-label="anchor" href="#unique-libraries"></a>
 </h3>
 <p>This function reads through the script and collects the libraries used throughout the script. The function will collect libraries called by <code><a href="https://rdrr.io/r/base/library.html" class="external-link">library()</a></code>, <code><a href="https://rdrr.io/r/base/library.html" class="external-link">require()</a></code>, <code>lib::</code> and insert these libraries at current cursor position. It will automatically remove duplicated usage of the same library. For example,</p>
 <pre><code><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va">abc</span><span class="op">)</span></span>
@@ -172,10 +172,10 @@ point 3</code></pre>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">lib</span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/rmarkdown" class="external-link">rmarkdown</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">xyz</span><span class="op">)</span></span></code></pre>
-<p>The other libraries are used in this Rmd file but not shown in this example.</p>
+<p>The other libraries are used in this Rmd file but not shown in this example. You will find this function handy when reading a messy script that the libraries are imported from every possible random place.</p>
 </div>
 <div class="section level3">
-<h3 id="insert-header-of-a-script">Insert header of a script<a class="anchor" aria-label="anchor" href="#insert-header-of-a-script"></a>
+<h3 id="a-header-summary-of-a-script">a header summary of a script<a class="anchor" aria-label="anchor" href="#a-header-summary-of-a-script"></a>
 </h3>
 <p>This function read through the currently active R script and summarize the script with following information of the current computing enviroment, hence the name of the package <code>scriptResume</code>.</p>
 <pre><code><span><span class="co"># ******************************************************************************</span></span>
@@ -213,7 +213,12 @@ point 3</code></pre>
 <p>Files exported with functions <code>write*()</code>, <code>save*()</code> will be collected.</p>
 <pre><code><span><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html" class="external-link">write.csv</a></span><span class="op">(</span><span class="va">data2</span>, <span class="st">"data/file2.csv"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/readRDS.html" class="external-link">saveRDS</a></span><span class="op">(</span><span class="va">file3</span>, <span class="st">"data/file3.Rds"</span><span class="op">)</span></span></code></pre>
-<p>Since this function is targeted at pharma industry, it will automatically read the current working directory ant output the triplet information. This illustration is tested in local so this function is not shown in the output.</p>
+<p>Since this function is targeted at pharma industry, it will automatically read the current working directory and output the triplet information. This illustration is tested in local so this function is not shown in the output above.</p>
+<p>Below is an example for a dummy directory. Since I’m always working on biomarker analysis, the analysis code always starts with BMK.</p>
+<pre><code><span><span class="co"># Author           : e123456</span></span>
+<span><span class="co"># Compound number  : SAR123</span></span>
+<span><span class="co"># Study code       : LPS123</span></span>
+<span><span class="co"># Analysis code    : BMK-CSR</span></span></code></pre>
 </div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
