@@ -28,7 +28,8 @@ md_bullet <- function() {
 #'
 #' @return padded string
 padding <- function(txt, pattern) {
-  lapply(txt, function(x) glue::glue(pattern, x, pattern)) %>%
+  lapply(txt, function(x) glue::glue(pattern, x, pattern),
+   .open = "<<", .close = ">>") %>%
     unlist()
 }
 
