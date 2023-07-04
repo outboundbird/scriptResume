@@ -22,14 +22,18 @@ md_bullet <- function() {
 }
 
 
-#' Pad the begining and end of a vector
+#' Pad the begining and end of a vector. If one wants to evaluate
+#' a text string, use `<< >>` to quote the code to be evaluted.
 #' @param txt string vector with length of one.
 #' @param pattern pattern to pad.
 #'
 #' @return padded string
 padding <- function(txt, pattern) {
-  lapply(txt, function(x) glue::glue(pattern, x, pattern,
-   .open = "<<", .close = ">>")) %>%
+  lapply(txt, function(x) {
+    glue::glue(pattern, x, pattern,
+      .open = "<<", .close = ">>"
+    )
+  }) %>%
     unlist()
 }
 
