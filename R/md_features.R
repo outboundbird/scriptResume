@@ -30,13 +30,10 @@ md_bullet <- function() {
 #' @return padded string
 padding <- function(txt, pattern) {
   lapply(txt, function(x) {
-    glue::glue(pattern, x, pattern,
-      .open = "<<", .close = ">>"
-    )
+    glue::glue(pattern, x, pattern, .open = "<<", .close = ">>")
   }) %>%
     unlist()
 }
-
 
 #' Transform code to markdown table
 #' cells must be separated by colons `:`
