@@ -16,7 +16,7 @@ Imports:
     stats,
     magrittr,
     glue
-Suggests: 
+Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
