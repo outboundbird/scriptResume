@@ -25,6 +25,9 @@
     <loc>https://outboundbird.github.io/scriptResume/reference/convert_roxygen.html</loc>
   </url>
   <url>
+    <loc>https://outboundbird.github.io/scriptResume/reference/create_css.html</loc>
+  </url>
+  <url>
     <loc>https://outboundbird.github.io/scriptResume/reference/current_fname.html</loc>
   </url>
   <url>
@@ -131,5 +134,8 @@
   </url>
   <url>
     <loc>https://outboundbird.github.io/scriptResume/reference/uncomment_roxygen.html</loc>
+  </url>
+  <url>
+    <loc>https://outboundbird.github.io/scriptResume/scriptResume.html</loc>
   </url>
 </urlset>
