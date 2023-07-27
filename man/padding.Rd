@@ -2,7 +2,8 @@
 % Please edit documentation in R/md_features.R
 \name{padding}
 \alias{padding}
-\title{Pad the begining and end of a vector}
+\title{Pad the begining and end of a vector. If one wants to evaluate
+a text string, use `<< >>` to quote the code to be evaluted.}
 \usage{
 padding(txt, pattern)
 }
@@ -15,5 +16,6 @@ padding(txt, pattern)
 padded string
 }
 \description{
-Pad the begining and end of a vector
+Pad the begining and end of a vector. If one wants to evaluate
+a text string, use `<< >>` to quote the code to be evaluted.
 }
