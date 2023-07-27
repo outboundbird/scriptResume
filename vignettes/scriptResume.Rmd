@@ -1,6 +1,6 @@
 ---
-title: "R Addin - scriptResume"
-date: "created: 2023-05-16, updated: `r Sys.Date()`"
+title: "scriptResume"
+date: "created: 2023-05-16, updated: `r Sys.Date()`, version 0.1.5"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{scriptResume}
@@ -213,3 +213,7 @@ Below is an example for a dummy directory. Since I'm always working on biomarker
 # Study code       : LPS123
 # Analysis code    : BMK-CSR
 ```
+
+## R markdown theme
+
+Starting from version 0.1.5, An Addin function, `make css` will be available for generating a predefined-themed `css` file. To use this function, put the cursor in the any open R script or any type of file, which defines currently active document, then click on the `make css` button. A css file named `theme.css` will be generated in the directory of the current active document.
