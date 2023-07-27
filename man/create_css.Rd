@@ -6,15 +6,9 @@
 \usage{
 create_css()
 }
-\arguments{
-\item{css_content}{content of css file.}
-}
 \value{
 Null. Create a .css file in the current directory
 }
 \description{
 Create a css file in the current directory
-}
-\examples{
-create_css()
 }
