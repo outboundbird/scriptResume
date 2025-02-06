@@ -28,12 +28,12 @@ text <- "'A', \"B, C'"
 stringr::str_replace_all(text, "\"|'", "")
 # check development problems -----------------------------------------
 library(devtools)
-check()
+devtools::check(manual = F)
 load_all()
 devtools::check_man()
 # devtools::document()
 devtools::test()
-devtools::check_built('src_')
+devtools::check_built("build")
 devtools::install()
 
 codetools::checkUsagePackage("scriptResume")
