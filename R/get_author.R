@@ -6,8 +6,9 @@
 #' @export
 get_author <- function(path) {
   author <- stringr::str_extract(path, "(?<=home/)\\w+")
-  if (is.na(author)) {
-    return("")
+  env_author <- exists("W_USER")
+  if (is.na(author) & env_author) {
+    return(get("W_USER"))
   }
   author
 }

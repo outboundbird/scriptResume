@@ -22,18 +22,18 @@ rstudioapi::callFun(source_cmd)
 rstudioapi::callFun("versionInfo")
 
 
-
+source_triplet_env()
 text <- "'A', \"B, C'"
 
 stringr::str_replace_all(text, "\"|'", "")
 # check development problems -----------------------------------------
 library(devtools)
 devtools::check(manual = F)
-load_all()
+devtools::load_all()
 devtools::check_man()
-# devtools::document()
+devtools::document()
 devtools::test()
-devtools::check_built("build")
+devtools::check_built("build_env")
 devtools::install()
 
 codetools::checkUsagePackage("scriptResume")
