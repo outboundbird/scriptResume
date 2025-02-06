@@ -12,7 +12,3 @@ A character vector with all quotation marks removed.
 \description{
 This function removes all quotation marks from the input strings.
 }
-\examples{
-rm_quotes("Hello, \"world\"!")
-# [1] "Hello, world!"
-}
