@@ -31,6 +31,7 @@ library(devtools)
 devtools::check(manual = F)
 devtools::load_all()
 devtools::check_man()
+# generate Rd files
 devtools::document()
 devtools::test()
 devtools::check_built("build_env")
