@@ -4,7 +4,7 @@
 #' @param get_target function object
 #' @param extract_file function object
 #'
-#' @export
+#' @noRd
 tracer <- function(get_target, extract_file) {
   function(line) {
     target <- get_target(line)

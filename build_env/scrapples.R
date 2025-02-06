@@ -46,4 +46,3 @@ devtools::install()
 
 codetools::checkUsagePackage("scriptResume")
 
-setup_project()

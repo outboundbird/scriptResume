@@ -3,7 +3,7 @@
 #' @param line a 1L character vector may or may not contains source file path.
 #'
 #' @return source file path/name
-#' @export
+#' @noRd
 #'
 #' @examples extr_src_file('source("src/utils/utils.R")')
 extr_src_file <- function(line) {
@@ -25,7 +25,7 @@ extr_src_file <- function(line) {
 #' @param doc_contents a character vector of a R script
 #'
 #' @return extracted non-duplicated source code files
-#' @export
+#' @noRd
 #'
 extract_uniq_src <- function(doc_contents) {
   return(unique(unlist(lapply(doc_contents, extr_src_file))))

@@ -4,7 +4,7 @@
 #' @param rst S3 io class object
 #'
 #' @return IO summary table
-#' @export
+#' @noRd
 print.io <- function(rst) {
   message("extracting info...")
 

@@ -1,6 +1,6 @@
 #' Tranform selected text to upper case
 #' @return upper case text
-#' @export
+#' @noRd
 to_upper <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id
@@ -20,7 +20,7 @@ to_upper <- function() {
 
 #' Tranform selected text to lower case
 #' @return lower case text
-#' @export
+#' @noRd
 to_lower <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id
@@ -41,7 +41,7 @@ to_lower <- function() {
 
 #' Remove the row ID print out from selected text
 #' @return text with ID removed
-#' @export
+#' @noRd
 rm_rowID <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id
