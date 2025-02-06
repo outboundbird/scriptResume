@@ -1,68 +1,71 @@
-Name: Insert header
+Name: Insert Header
 Description: Inserts header at the top position of r cript.
 Binding: insert_header
 Interactive: false
 
-
-Name: Insert unique libraries
+Name: Insert Unique Libraries
 Description: Remove duplicated libraries and insert cleaned up libraries.
 Binding: remove_dup_libs
 Interactive: false
 
-Name: Objects to quoted text
+Name: Objects to Quoted Text
 Description: Turns selected text into quoted text
 Binding: selection2str
 Interactive: false
 
-Name: Roxygen comment
+Name: Roxygen Comment
 Description: Transform selected text into roxygen commented text
 Binding: selection2roxygen
 Interactive: false
 
-Name: Roxygen quote
+Name: Roxygen Quote
 Description: Transform selected text into roxygen quoted text
 Binding: selection2roxygen_quote
 Interactive: false
 
-Name: Roxygen uncomment
+Name: Roxygen Uncomment
 Description: Uncomment the selected roxygen comments
 Binding: uncomment_roxygen
 Interactive: false
 
-Name: Upper case
+Name: Upper Case
 Description: Transform selected text into upper case text
 Binding: to_upper
 Interactive: false
 
-Name: Lower case
+Name: Lower Case
 Description: Transform selected text into upper case text
 Binding: to_lower
 Interactive: false
 
-Name: Remove row ID
+Name: Remove Row ID
 Description: Remove the row ID from print out
 Binding: rm_rowID
 Interactive: false
 
-Name: to bullet point
+Name: To Bullet Point
 Description: Transform to MD bullet points
 Binding: md_bullet
 Interactive: false
 
-Name: to table
+Name: To Table
 Description: Transform to MD table
 Binding: md_tab
 Interactive: false
 
-Name: make css
+Name: Make CSS
 Description: Create CSS file in the current directory
 Binding: create_css
 Interactive: false
 
-Name: remove quotes
+Name: Remove Quotes
 Description: Remove quotation marks from a selected text
 Binding: rm_quotes
 
-Name: source triplet
+Name: Source Triplet
 Description: source the triplet environment
 Binding: source_triplet_env
+
+Name: Setup Project
+Description: Create a project environment with essential files
+Binding: setup_project
