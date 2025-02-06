@@ -14,6 +14,3 @@ This function sources a specific R script located within a triplet directory str
 It retrieves the active document's path, constructs the triplet path, and sources the
 specified script from the constructed path.
 }
-\examples{
-source_triplet_env()
-}

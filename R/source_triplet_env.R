@@ -5,8 +5,6 @@
 #' specified script from the constructed path.
 #'
 #' @return None
-#' @examples
-#' source_triplet_env()
 #' @export
 source_triplet_env <- function() {
   path <- rstudioapi::getActiveDocumentContext()$path
