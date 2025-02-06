@@ -1,6 +1,6 @@
 #' Create a css file in the current directory
 #' @return Null. Create a .css file in the current directory
-#' @export
+#' @noRd
 create_css <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   current_f_path <- doc$path
