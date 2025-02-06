@@ -31,11 +31,12 @@ trace_output <- tracer(export_name, extr_output_file)
 
 #' data_transit, track data transition from readin files
 #'
+#' @importFrom stats setNames
 #' @param line char, the text line to be read
 #' @param target char, the key word target
 #'
 #' @return list of transit and target
-#' @export
+#' @noRd
 data_transit <- function(line, target) {
   pattern_target <- paste0(".+\\<\\-\\s*", target, "(?!\\w)")
   extract <- stringr::str_extract(line, pattern_target)
