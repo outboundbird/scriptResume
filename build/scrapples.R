@@ -29,3 +29,11 @@ stringr::str_replace_all(text, "\"|'", "")
 # check development problems -----------------------------------------
 library(devtools)
 check()
+load_all()
+devtools::check_man()
+# devtools::document()
+devtools::test()
+devtools::check_built('src_')
+devtools::install()
+
+codetools::checkUsagePackage("scriptResume")
