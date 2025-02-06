@@ -21,7 +21,7 @@ rstudioapi::callFun(source_cmd)
 
 rstudioapi::callFun("versionInfo")
 
-source_triplet_env()
+
 
 text <- "'A', \"B, C'"
 
