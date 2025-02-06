@@ -3,7 +3,7 @@
 #' @param path a string vector of one indicating current path.
 #'
 #' @return string, author ID
-#' @export
+#' @noRd
 get_author <- function(path) {
   author <- stringr::str_extract(path, "(?<=home/)\\w+")
   env_author <- exists("W_USER")

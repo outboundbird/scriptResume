@@ -3,7 +3,7 @@
 #' @param txt , a string vector
 #'
 #' @return a string vector with roxygen commet at each prefix
-#' @export
+#' @noRd
 #'
 #' @examples
 #' txt <- "a
@@ -22,9 +22,7 @@ convert_roxygen <- function(txt) {
 #' @param txt a string vector.
 #'
 #' @return quoted roxygen comments
-#' @export
-#' @examples
-#' # ADD_EXAMPLES_HERE
+#' @noRd
 roxygen_quote <- function(txt) {
   txt_split <- stringr::str_split(txt, "\\\n")[[1]]
   stringr::str_c("#' > ", txt_split, collapse = "\n")
@@ -38,7 +36,7 @@ roxygen_quote <- function(txt) {
 #' @param text a string vector with roxygen comment sign.
 #'
 #' @return a string vector without roxygen comment
-#' @export
+#' @noRd
 redo_roxycomment <- function(text) {
   stringr::str_split(text, "\n") %>%
     unlist() %>%
@@ -52,7 +50,6 @@ redo_roxycomment <- function(text) {
 #' Roxygen comment on currently selected section
 #'
 #' @return text with roxygen comment format
-#' @export
 selection2roxygen <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id
@@ -74,7 +71,7 @@ selection2roxygen <- function() {
 #' Transform current text selection into roxygen comment with quotation.
 #'
 #' @return quoted roxygen text
-#' @export
+#' @noRd
 selection2roxygen_quote <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id
@@ -95,7 +92,7 @@ selection2roxygen_quote <- function() {
 
 #' uncomment roxygen format comment
 #' @return text without roxygen format
-#' @export
+#' @noRd
 uncomment_roxygen <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id

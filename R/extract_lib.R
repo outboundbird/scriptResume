@@ -3,7 +3,7 @@
 #' @param line character text from code
 #'
 #' @return NULL or library name extracted from text
-#' @export
+#' @noRd
 #'
 #' @examples extract_lib("library(apple)")
 extract_lib <- function(line) {
@@ -29,7 +29,7 @@ extract_lib <- function(line) {
 #' function
 #'
 #' @return unique libraries used in the document
-#' @export
+#' @noRd
 extract_uniq_libs <- function(doc_contents) {
   libs <- unique(unlist(lapply(doc_contents, extract_lib)))
   return(sort(libs))

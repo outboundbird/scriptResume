@@ -3,7 +3,7 @@
 #' @param pattern_split character, pattern for spliting
 #' @param pattern character for extract contents
 #' @return functions
-#' @export
+#' @noRd
 get_names <- function(pattern_split, pattern) {
   function(line) {
     extract <- stringr::str_split(line, pattern_split)[[1]]

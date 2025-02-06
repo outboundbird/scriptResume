@@ -5,7 +5,7 @@
 #' @param ... other things pass to the function
 #'
 #' @return S3 class object of io and inheritated from list class
-#' @export
+#' @noRd
 get_io <- function(filename, ...) {
   # read in file
   stopifnot(is.character(filename))

@@ -4,7 +4,7 @@
 #' loading required libraries, and preparing the workspace for further analysis.
 #'
 #' @return None
-#' @export
+#' @noRd
 setup_project <- function() {
   # find active path
   doc <- rstudioapi::getActiveDocumentContext()

@@ -3,7 +3,7 @@
 #' @param line 1L character the text line to be read
 #'
 #' @return the file name output from the R script
-#' @export
+#' @noRd
 #'
 #' @examples extr_output_file("saveRDS('test.Rds')")
 extr_output_file <- function(line) {
@@ -25,7 +25,7 @@ extr_output_file <- function(line) {
 #'
 #' @return a vector of output files written in the R script if any
 #' NULL if there isn't any
-#' @export
+#' @noRd
 #'
 extract_uniq_outputs <- function(doc_contents) {
   return(unique(unlist(lapply(doc_contents, extr_output_file))))

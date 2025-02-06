@@ -1,7 +1,7 @@
 utils::globalVariables(".")
 #' Selection to markdown bullet point list
 #' @return markdown bulle point list
-#' @export
+#' @noRd
 md_bullet <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id
@@ -38,7 +38,7 @@ padding <- function(txt, pattern) {
 #' Transform code to markdown table
 #' cells must be separated by colons `:`
 #' @return markdown table format
-#' @export
+#' @noRd
 md_tab <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id

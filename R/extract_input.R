@@ -3,7 +3,7 @@
 #' @param line a 1L character vector may or may not contains input data line.
 #'
 #' @return input file name
-#' @export
+#' @noRd
 #'
 #' @examples extr_input_file('read.csv("something.csv", header = T)')
 extr_input_file <- function(line) {
@@ -25,7 +25,7 @@ extr_input_file <- function(line) {
 #' @param doc_contents a character vector of a R script
 #'
 #' @return extracted non-duplicated input data files
-#' @export
+#' @noRd
 #'
 extract_uniq_inputs <- function(doc_contents) {
   return(unique(unlist(lapply(doc_contents, extr_input_file))))

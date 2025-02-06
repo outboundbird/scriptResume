@@ -2,7 +2,7 @@
 #'
 #' @return Insert the libraries in the script at the
 #' cursor position
-#' @export
+#' @noRd
 #'
 remove_dup_libs <- function() {
   doc <- rstudioapi::getActiveDocumentContext()

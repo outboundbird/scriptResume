@@ -2,7 +2,7 @@
 #' @param line a char vector.
 #'
 #' @return quoted test
-#' @export
+#' @noRd
 #' @examples
 #' line = "a, b, c"
 #' tostring(line)
@@ -15,7 +15,7 @@ tostring <- function(line) {
 
 #' make the selected text into string/characters
 #' @return quoted text
-#' @export
+#' @noRd
 selection2str <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id

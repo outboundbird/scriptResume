@@ -3,7 +3,7 @@
 #' This function removes all quotation marks from the input strings.
 #'
 #' @return A character vector with all quotation marks removed.
-#' @export
+#' @noRd
 rm_quotes <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id

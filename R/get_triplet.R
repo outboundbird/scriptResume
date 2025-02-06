@@ -1,13 +1,11 @@
 
 #' get the triplet information and
 #'
-#' FUNCTION_DESCRIPTION
-#'
 #' @param path string character of current file path.
 #'
 #' @return if detected the triplet will return the triplet info. if not, will
 #' return empty space.
-#' @export
+#' @noRd
 get_triplet <- function(path) {
   trip_list <- stringr::str_extract(path, "(?<=SAR).+") %>%
     stringr::str_split("\\/")

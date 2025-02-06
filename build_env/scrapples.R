@@ -36,7 +36,10 @@ devtools::document()
 # build vignette, if update vg, need to manually move html file into the docs dir to publish in traditional way
 # devtools::build_vignettes()
 # use package down to build vignette
-pkgdown::build_articles()
+# pkgdown::build_site()
+pkgdown::build_site_github_pages()
+pkgdown::build_articles_index()
+pkgdown::build_reference()
 
 # build package
 devtools::build()
@@ -46,4 +49,3 @@ devtools::install()
 
 codetools::checkUsagePackage("scriptResume")
 
-setup_project()
