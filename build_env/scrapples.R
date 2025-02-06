@@ -6,9 +6,9 @@ path <- getActiveDocumentContext()$path
 
 path <- "~/wise/DEVOPS/SAR447537/INBRX101/BMK/EXPLO/PGM/datacheck_BMK.R"
 
-triplet <- str_split(path, "/") %>% 
-unlist() %>% 
-.[1:6] %>% 
+triplet <- str_split(path, "/") %>%
+unlist() %>%
+.[1:6] %>%
 paste(., collapse = "/")
 
 source_loc <- "METADATA/WISE/alloc_ana.R"
@@ -42,3 +42,5 @@ devtools::check_built("build_env")
 devtools::install()
 
 codetools::checkUsagePackage("scriptResume")
+
+setup_project()
