@@ -16,6 +16,12 @@ source_triplet_env <- function() {
 
   source_loc <- "METADATA/WISE/alloc_ana.R"
   triplet_source_path <- file.path(triplet, source_loc)
-  source_cmd <- paste0("source(", triplet_source_path, ")")
-  rstudioapi::callFun(source_cmd)
+  tryCatch(
+    {
+      source(triplet_source_path)
+    },
+    error = function(e) {
+      warning(e)
+    }
+  )
 }
