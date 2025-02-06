@@ -22,3 +22,10 @@ rstudioapi::callFun(source_cmd)
 rstudioapi::callFun("versionInfo")
 
 source_triplet_env()
+
+text <- "'A', \"B, C'"
+
+stringr::str_replace_all(text, "\"|'", "")
+# check development problems -----------------------------------------
+library(devtools)
+check()
