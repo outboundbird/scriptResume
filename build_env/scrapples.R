@@ -33,8 +33,11 @@ devtools::load_all()
 devtools::check_man()
 # generate Rd files
 devtools::document()
-# build vignette, if update vg, need to manually move html file into the docs dir to publish
-devtools::build_vignettes()
+# build vignette, if update vg, need to manually move html file into the docs dir to publish in traditional way
+# devtools::build_vignettes()
+# use package down to build vignette
+pkgdown::build_articles()
+
 # build package
 devtools::build()
 devtools::test()
