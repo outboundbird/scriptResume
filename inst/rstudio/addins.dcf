@@ -58,3 +58,11 @@ Name: make css
 Description: Create CSS file in the current directory
 Binding: create_css
 Interactive: false
+
+Name: remove quotes
+Description: Remove quotation marks from a selected text
+Binding: rm_quotes
+
+Name: source triplet
+Description: source the triplet environment
+Binding: source_triplet_env

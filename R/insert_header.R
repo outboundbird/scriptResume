@@ -41,7 +41,7 @@ insert_header <- function() {
 # Author           : {author}
 # Compound number  : SAR{triplet_info[1]}
 # Study code       : {triplet_info[2]}
-# Analysis code    : BMK-{triplet_info[3]}
+# Analysis code    : {triplet_info[3]}
 # Date created     : {Sys.Date()}
 # Input files      : {paste0(input_data, collapse = nextline)}
 # Input programs   : {paste0(src_file, collapse = nextline)}

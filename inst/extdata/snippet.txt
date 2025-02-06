@@ -1,0 +1,219 @@
+
+
+snippet switch
+	switch (${1:object},
+		${2:case} = ${3:action}
+	)
+
+snippet apply
+	apply(${1:array}, ${2:margin}, ${3:...})
+
+snippet lapply
+	lapply(${1:list}, ${2:function})
+
+snippet sapply
+	sapply(${1:list}, ${2:function})
+
+snippet mapply
+	mapply(${1:function}, ${2:...})
+
+snippet tapply
+	tapply(${1:vector}, ${2:index}, ${3:function})
+
+snippet vapply
+	vapply(${1:list}, ${2:function}, FUN.VALUE = ${3:type}, ${4:...})
+
+snippet rapply
+	rapply(${1:list}, ${2:function})
+
+snippet ts
+	`r paste("#", date(), "------------------------------\n")`
+
+snippet shinyapp
+	library(shiny)
+	
+	ui <- fluidPage(
+	  ${0}
+	)
+	
+	server <- function(input, output, session) {
+	  
+	}
+	
+	shinyApp(ui, server)
+
+snippet shinymod
+	${1:name}_UI <- function(id) {
+	  ns <- NS(id)
+	  tagList(
+		${0}
+	  )
+	}
+	
+	${1:name} <- function(input, output, session) {
+	  
+	}
+
+snippet pi
+	%>%
+
+snippet in
+	%in%
+
+snippet +
+	#+ ${0}
+
+snippet /
+	#' ${0}
+
+snippet rhead
+	#' ---
+	#' title: ${title}
+	#' subtitle: 'SAR: `r stringr::str_extract(rstudioapi::getSourceEditorContext()$path,'SAR\\d+')` , Study: `r unlist(stringr::str_split(rstudioapi::getSourceEditorContext()$path, '/'))[5]`, Analysis: `r unlist(stringr::str_split(rstudioapi::getSourceEditorContext()$path, '/'))[6]`'
+	#' author:  Siying Huang (E0482362), Biomarker statistics team
+	#' date: 'created: `r Sys.Date()`, updated (\`${1:r Sys.Date()}\`)'
+	#' always_allow_html: true
+	#' output:
+	#'   html_document:
+	#'     css: theme.css
+	#'     code_folding: "hide"
+	#'     toc: yes
+	#'     toc_float:
+	#'       collapse: no
+	#' ---
+	#+ setup, include = FALSE
+	knitr::opts_knit\$set(root_dir="`r getwd()`")
+	knitr::opts_chunk\$set(echo = T, comment = '',message = F, warning = F, error=F)
+	options(width = 100)
+	#+ libs
+	library(knitr)
+	library(dplyr)
+	${0}
+	#+ io
+	${0}
+	#' <details><summary>Session Info</summary>
+	sessionInfo()
+	#' </details>
+	/*
+	# Markdown --------------------------------------------------------
+	# rmarkdown::render("`r rstudioapi::getSourceEditorContext()$path`", output_dir = EXPLOO)
+	*/
+
+snippet heat
+	grid::grid.newpage()
+	pheatmap::pheatmap(df,
+	  annotation_col = labels,
+	  border_color = NA,
+	  breaks = seq(-6,6, length.out = 100),
+	  legend_labels = '',
+	  main = '',
+	  clustering_distance_rows = "correlation",
+	  clustering_distance_cols = "correlation",
+	  clusstering_method = "complete",
+	  cluster_rows = TRUE, show_rownames = FALSE,
+	  cluster_cols = F, show_colnames = FALSE,
+	  silent = TRUE
+	)
+	grid::grid.draw()
+	
+snippet pkg_install
+	curr_libpath <- file.path(W_WISE,".R/LIB")
+	env_pkgs <- as.vector(installed.packages(lib.loc = curr_libpath)[, "Package"])
+	req_libs <- c("dplyr","stringr", "BiocManager")   
+	to_install <- req_libs[!req_libs %in% env_pkgs]
+	
+
+	if (length(to_install)) {
+	  message(sprintf("packages to install: %s", to_install))
+	  message(sprintf("Execution starts %s", as.character(Sys.time())))
+	  
+	  lapply(to_install, function(pkg) {
+	    tryCatch(
+	      {
+	        message(sprintf("Installing %s", pkg))
+	        install.packages(to_install,
+	                         file.path(W_WISE,".R/LIB"),
+	                         dependencies = TRUE,
+	                         INSTALL_opts = c("--no-lock")
+	        )
+	      },
+	      error = function(e) {
+	        warning(e)
+	      }
+	    )
+	  })
+	}
+	# Install from Bioconductor -----------------------------------------------
+
+
+	req_bio <- c(
+	${1}
+	)
+	
+	to_install <- req_bio[!req_bio %in% env_pkgs]
+	
+	
+	if(length(to_install)){
+	  message(sprintf("Bioconductor packages to install: %s", to_install))
+	  message(sprintf("Execution starts %s", as.character(Sys.time())))
+	  lapply(to_install, function(pkg){
+	    tryCatch({
+	      BiocManager::install(pkg, 
+	                           update = T)
+	      
+	    }, error = function(e){
+	      warning(e)
+	    })
+	  })
+	}
+
+
+	# Github repo -------------------------------------------------------------
+	
+	git_repos <- c(${2})
+
+	if(!is.null(git_repos)) {
+	  git_libs <- stringr::str_extract(git_repos, "(?<=\\/).+")
+	  to_install <- git_repos[!git_libs %in% env_pkgs]
+	  if(length(to_install)){
+	    lapply(to_install, function(link) {
+	      tryCatch({
+	        devtools::install_github(
+	          link,
+	          quiet = TRUE,
+	          dependencies = TRUE,
+	          upgrade = "never"
+	        )
+	      },
+	      error = function(e) {
+	        warning(e)
+	      })
+	    })
+	  }
+	}
+
+
+snippet datacheck
+	# check dataset in a file directory in Rmd
+	#+ results = 'asis'
+
+	`%>%` <- magrittr::`%>%`
+	filedir = ""
+	sapply(list.files(filedir), function(filename) {
+		cat("##", filename, "\n\n")
+
+		data <- haven::read_sas(file.path(filedir, filename))
+
+		summarytools::dfSummary(
+			data,
+			plain.ascii  = FALSE,
+			style        = "grid",
+			graph.col 	 = F,
+			# graph.magnif = 0.75,
+			valid.col    = FALSE,
+			tmp.img.dir  = "./tmp") %>%
+			print() %>%
+			cat("\n\n")
+		}, simplify = F, USE.NAMES = T)
+
+
