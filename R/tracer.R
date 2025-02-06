@@ -19,6 +19,7 @@ tracer <- function(get_target, extract_file) {
 #' @param line DESCRIPTION.
 #'
 #' @return list of target and input files
+#' @noRd
 trace_input <- tracer(import_name, extr_input_file)
 
 
@@ -26,6 +27,7 @@ trace_input <- tracer(import_name, extr_input_file)
 #' @param line DESCRIPTION.
 #'
 #' @return list of target and output files
+#' @noRd
 trace_output <- tracer(export_name, extr_output_file)
 
 
