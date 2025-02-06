@@ -68,6 +68,8 @@ to
  "8 m = 379"   "9 m = 297"
 ```
 
+`remove quotes` function will remove any quotation marks in the selected text, e.g. it will change `"A",'B'` to `A, B`.
+
 `Upper case` and `Lower case` transform the selected text into upper or lower cased format.
 
 ### Roxygen formatting features
@@ -149,7 +151,7 @@ The other libraries are used in this Rmd file but not shown in this example.
 You will find this function handy when reading a messy script that the libraries
 are imported from every possible random place.
 
-### a header summary of a script
+### A header summary of a script
 
 This function read through the currently active R script and summarize the script
 with following information of the current computing enviroment, hence the name of the package `scriptResume`.
@@ -213,6 +215,10 @@ Below is an example for a dummy directory. Since I'm always working on biomarker
 # Study code       : LPS123
 # Analysis code    : BMK-CSR
 ```
+
+## Sourcing triplet environment
+
+Starting from version 0.1.6, this addin has a new feature for sourcing the triplet environment. Placing the cursor in the file that is located in a triplet environment then click on the button of `source triplet` in the addin. The current working environment will be changed to the triplet environment the active file is located.
 
 ## R markdown theme
 
