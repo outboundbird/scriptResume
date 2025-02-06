@@ -23,7 +23,7 @@ script reading functions.
 
 ## Editing functions
 
-These Addin functions help to facilitate coding process.
+These addin functions help to facilitate coding process.
 
 - Objects to quoted text
 - Remove row ID
