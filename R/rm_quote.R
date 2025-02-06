@@ -14,7 +14,7 @@ rm_quotes <- function() {
   select_pos <- doc$selection[[1]]$range
   if (nchar(selected) > 0) {
     message(sprintf("You have selected:\n %s", selected))
-    output <- gsub('"', "", text)
+    output <- stringr::str_replace_all(text, "\"|'", "")
     message(output)
   } else {
     message("Nothing selected.")
