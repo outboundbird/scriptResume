@@ -23,6 +23,7 @@ get_names <- function(pattern_split, pattern) {
 #' @param line string entry.
 #'
 #' @return string, file name
+#' @noRd 
 import_name <- get_names("read|load", ".+(?=\\s*\\<\\-)")
 
 
@@ -31,6 +32,7 @@ import_name <- get_names("read|load", ".+(?=\\s*\\<\\-)")
 #' @param line string entry.
 #'
 #' @return string, file name
+#' @noRd
 export_name <- get_names(
   "(save)|(write)[A-Zaz\\.a-z]*",
   "[^(].+(?=\\s*\\,)"

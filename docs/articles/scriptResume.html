@@ -64,9 +64,9 @@
 facilitate the coding process. It comes especially handy after combined
 with keyboard short cuts. Currently, there are two section of functions
 implemented - editing functions and script reading functions.</p>
-<div class="section level3">
-<h3 id="editing-functions">Editing functions<a class="anchor" aria-label="anchor" href="#editing-functions"></a>
-</h3>
+<div class="section level2">
+<h2 id="editing-functions">Editing functions<a class="anchor" aria-label="anchor" href="#editing-functions"></a>
+</h2>
 <p>These addin functions help to facilitate coding process.</p>
 <ul>
 <li>Objects to quoted text</li>
@@ -80,9 +80,9 @@ implemented - editing functions and script reading functions.</p>
 <li>to bullet point</li>
 <li>to table</li>
 </ul>
-<div class="section level4">
-<h4 id="copy-paste-related-features">Copy &amp; paste related features<a class="anchor" aria-label="anchor" href="#copy-paste-related-features"></a>
-</h4>
+<div class="section level3">
+<h3 id="copy-paste-related-features">Copy &amp; paste related features<a class="anchor" aria-label="anchor" href="#copy-paste-related-features"></a>
+</h3>
 <p><code>Object to quoted text</code> transforms a chunk of selected
 text with comma separator into a string vector. For example, from</p>
 <pre><code>a, b, c, d</code></pre>
@@ -109,9 +109,9 @@ in the selected text, e.g. it will change <code>"A",'B'</code> to
 <p><code>Upper case</code> and <code>Lower case</code> transform the
 selected text into upper or lower cased format.</p>
 </div>
-<div class="section level4">
-<h4 id="roxygen-formatting-features">Roxygen formatting features<a class="anchor" aria-label="anchor" href="#roxygen-formatting-features"></a>
-</h4>
+<div class="section level3">
+<h3 id="roxygen-formatting-features">Roxygen formatting features<a class="anchor" aria-label="anchor" href="#roxygen-formatting-features"></a>
+</h3>
 <p>These features are used in the R script instead of R Markdown files.
 They will transform the selected text into Roxygen format comment or
 quoted text in Roxygen format. Alternatively it can back-tranform a
@@ -124,9 +124,9 @@ chunk of Roxygen comment format text back to text in R script.</p>
 <p><code>Roxygen quote</code>: e.g. from <code>Some quotes</code> to
 <code>#' &gt; Some quotes</code></p>
 </div>
-<div class="section level4">
-<h4 id="markdown-related-features">Markdown related features<a class="anchor" aria-label="anchor" href="#markdown-related-features"></a>
-</h4>
+<div class="section level3">
+<h3 id="markdown-related-features">Markdown related features<a class="anchor" aria-label="anchor" href="#markdown-related-features"></a>
+</h3>
 <p><code>to bullet point</code> transforms selected text into bullet
 points. The selected text has to be separated by <code>\n</code>.</p>
 <pre><code>point 1
@@ -165,18 +165,18 @@ separated entry into <code>md</code> table format. For example,</p>
 </table>
 </div>
 </div>
-<div class="section level3">
-<h3 id="script-reading-functions">Script reading functions<a class="anchor" aria-label="anchor" href="#script-reading-functions"></a>
-</h3>
+<div class="section level2">
+<h2 id="script-reading-functions">Script reading functions<a class="anchor" aria-label="anchor" href="#script-reading-functions"></a>
+</h2>
 <p>These addin functions read through the currently active script and
 summarize the script. The functions include:</p>
 <ul>
 <li>Insert unique libraries</li>
 <li>Insert header</li>
 </ul>
-<div class="section level4">
-<h4 id="unique-libraries">Unique libraries<a class="anchor" aria-label="anchor" href="#unique-libraries"></a>
-</h4>
+<div class="section level3">
+<h3 id="unique-libraries">Unique libraries<a class="anchor" aria-label="anchor" href="#unique-libraries"></a>
+</h3>
 <p>This function reads through the script and collects the libraries
 used throughout the script. The function will collect libraries called
 by <code><a href="https://rdrr.io/r/base/library.html" class="external-link">library()</a></code>, <code><a href="https://rdrr.io/r/base/library.html" class="external-link">require()</a></code>, <code>lib::</code>
@@ -196,9 +196,9 @@ example,</p>
 example. You will find this function handy when reading a messy script
 that the libraries are imported from every possible random place.</p>
 </div>
-<div class="section level4">
-<h4 id="a-header-summary-of-a-script">A header summary of a script<a class="anchor" aria-label="anchor" href="#a-header-summary-of-a-script"></a>
-</h4>
+<div class="section level3">
+<h3 id="a-header-summary-of-a-script">A header summary of a script<a class="anchor" aria-label="anchor" href="#a-header-summary-of-a-script"></a>
+</h3>
 <p>This function read through the currently active R script and
 summarize the script with following information of the current computing
 enviroment, hence the name of the package <code>scriptResume</code>.</p>
@@ -251,9 +251,9 @@ on biomarker analysis, the analysis code always starts with BMK.</p>
 <span><span class="co"># Analysis code    : BMK-CSR</span></span></code></pre>
 </div>
 </div>
-<div class="section level3">
-<h3 id="r-markdown-theme">R markdown theme<a class="anchor" aria-label="anchor" href="#r-markdown-theme"></a>
-</h3>
+<div class="section level2">
+<h2 id="r-markdown-theme">R markdown theme<a class="anchor" aria-label="anchor" href="#r-markdown-theme"></a>
+</h2>
 <p>Starting from version 0.1.5, An Addin function, <code>make css</code>
 will be available for generating a predefined-themed <code>css</code>
 file. To use this function, put the cursor in the any open R script or

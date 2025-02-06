@@ -221,13 +221,13 @@ Below is an example for a dummy directory. Since I'm always working on biomarker
 
 Starting from version 0.1.5, An Addin function, `make css` will be available for generating a predefined-themed `css` file. To use this function, put the cursor in the any open R script or any type of file, which defines currently active document, then click on the `make css` button. A css file named `theme.css` will be generated in the directory of the current active document.
 
-# Project environment
+## Project environment
 
-## Sourcing triplet environment
+### Sourcing triplet environment
 
 Starting from version 0.1.6, this addin has a new feature for sourcing the triplet environment. Placing the cursor in the file that is located in a triplet environment then click on the button of `source triplet` in the addin. The current working environment will be changed to the triplet environment the active file is located.
 
-## Create a project environment
+### Create a project environment
 The `Setup Project` button will create a subdirectory in the current active file directory. e.g.
 ```
 |- data

@@ -50,6 +50,7 @@ redo_roxycomment <- function(text) {
 #' Roxygen comment on currently selected section
 #'
 #' @return text with roxygen comment format
+#' @noRd
 selection2roxygen <- function() {
   doc <- rstudioapi::getActiveDocumentContext()
   id <- doc$id

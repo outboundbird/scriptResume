@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   scriptResume: scriptResume.html
-last_built: 2025-02-06T17:06Z
+last_built: 2025-02-06T17:32Z
 urls:
   reference: https://outboundbird.github.io/scriptResume/reference
   article: https://outboundbird.github.io/scriptResume/articles
