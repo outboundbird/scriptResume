@@ -1,13 +1,22 @@
-# install project R packages
+# Install required packages
+#' @title Install Required Packages
+#' @description This script checks for the required packages and installs them if they are not already installed.
+#' @param req_libs A vector of required packages to be installed from CRAN.
+#' @param req_bio A vector of required packages to be installed from Bioconductor.
+#' @param git_repos A vector of required packages to be installed from GitHub.
+#' @param env_pkgs A vector of installed packages in the environment.
+#' @param to_install A vector of packages to be installed.
+#' @param pkg A package to be installed.
+
 
 lib_repos <- .libPaths()
 lib <- lib_repos[2]
 curr_libpath <- lib
 env_pkgs <- as.vector(installed.packages(lib.loc = curr_libpath)[, "Package"])
 req_libs <- c(
-  "dplyr","stringr", "BiocManager","devtools")
+  "dplyr", "stringr", "BiocManager", "devtools"
+)
 to_install <- req_libs[!req_libs %in% env_pkgs]
-
 
 if (length(to_install)) {
   message(sprintf("packages to install: %s", to_install))
@@ -18,9 +27,9 @@ if (length(to_install)) {
       {
         message(sprintf("Installing %s", pkg))
         install.packages(to_install,
-                         lib,
-                         dependencies = TRUE,
-                         INSTALL_opts = c("--no-lock")
+          lib,
+          dependencies = TRUE,
+          INSTALL_opts = c("--no-lock")
         )
       },
       error = function(e) {
