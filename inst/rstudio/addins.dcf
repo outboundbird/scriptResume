@@ -58,6 +58,11 @@ Description: Create CSS file in the current directory
 Binding: create_css
 Interactive: false
 
+Name: Install package
+Description: Create a pkg_install.R file in the current directory
+Binding: create_pkg
+Interactive: false
+
 Name: Remove Quotes
 Description: Remove quotation marks from a selected text
 Binding: rm_quotes
